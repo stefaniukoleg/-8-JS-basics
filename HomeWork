@@ -1,0 +1,53 @@
+1. Prepare and show message in console.
+var name = prompt("Enter your name:",  "Write here your name");
+var time = prompt("Enter the time of event (hour:minute):", "Write here the time of event");
+var place = prompt("Enter the place of event:", "Write here the place of event");
+var event = prompt("Suggest the event:", "Write here suggesting event");
+alert(name + " has a " + event + " today at " + time + " somewhere in " + place);
+
+2. Find and show (using alert) distance between 2 points.
+var x1 = prompt("Enter X1:",  "Write here X1");
+var y1 = prompt("Enter Y1:", "Write here Y1");
+var x2 = prompt("Enter X2:",  "Write here X2");
+var y2 = prompt("Enter Y2:", "Write here Y2");
+var result=Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+alert( "The distance between points A(" + x1 + "," + y1 + ") and B(" + x2 + "," + y2 + ") is " + result );
+
+3. Show in console using FOR.
+for(var i = 1;i <= 10; ++i) 
+{
+for(var j = 1; j <= i; ++j)
+console.log(" # "); 
+console.log("<br>"); 
+};
+
+4. Show in console using WHILE.
+var diez = "# # # # #";
+circle = 1;
+while (circle < 8) {
+if (!(circle % 2)) {
+console.log(" " + diez);
+} else {
+console.log(diez);
+}
+circle++;
+}
+
+5. Create “Guess number” game.
+var yourNum, randNum = parseInt(Math.random() * 101);
+while (yourNum !== randNum) {
+yourNum = prompt("Enter the number from 0 to 100, please:");
+if (yourNum === null) {
+alert("Looser! The number is "+randNum);
+return;
+}
+yourNum = parseInt(yourNum);
+if (isNaN(yourNum)) {
+alert("Hey! Be careful, this sign is not a number.Try again.");
+} else if (yourNum > randNum) {
+alert ("The number is lower, try again.");
+} else if (yourNum < randNum) {
+alert ("The number is higher, try again.");
+}
+}
+alert("You are right, the number is " + randNum + ".");
